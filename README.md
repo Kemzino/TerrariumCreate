@@ -2,7 +2,7 @@
 
 Збірка сервера **Terrarium** — Minecraft 1.21.1, NeoForge 21.1.241.
 
-Гравцям нічого тут робити руками: [Terrarium Launcher](https://github.com/IhorDovhanych/TerrariumLauncher)
+Гравцям нічого тут робити руками: [Terrarium Launcher](https://github.com/Kemzino/TerrariumLauncher)
 сам бере останній реліз із цього репозиторію і встановлює/оновлює збірку.
 
 ## Структура

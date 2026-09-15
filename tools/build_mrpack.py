@@ -34,7 +34,7 @@ LOCK = ROOT / "mods.lock.json"
 # налаштування), tacz (мод сам генерує дефолтний пак).
 OVERRIDE_DIRS = ["config", "defaultconfigs", "kubejs", "resourcepacks", "shaderpacks", "datapacks"]
 MODRINTH_API = "https://api.modrinth.com/v2"
-USER_AGENT = "TerrariumCreate/build_mrpack (github.com/IhorDovhanych/TerrariumCreate)"
+USER_AGENT = "TerrariumCreate/build_mrpack (github.com/Kemzino/TerrariumCreate)"
 
 
 def sha(path: Path, algo: str) -> str:
