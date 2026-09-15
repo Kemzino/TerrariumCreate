@@ -1,0 +1,21 @@
+{
+  "debugPathingParticlesEnabled": false,
+  "entityConfigs": {
+    "dirt_dragon_health": 28.0,
+    "dirt_dragon_exp": 6,
+    "dirt_dragon_damage": 2.0,
+    "graboid_health": 80.0,
+    "graboid_exp": 25,
+    "graboid_damage": 10.0,
+    "graboid_armor": 6.0,
+    "shrieker_health": 20.0,
+    "shrieker_exp": 8,
+    "shrieker_damage": 4.0,
+    "blaster_health": 5.0,
+    "blaster_exp": 10,
+    "blaster_damage": 5.0
+  },
+  "itemConfigs": {
+    "shotgun_damage": 20.0
+  }
+}

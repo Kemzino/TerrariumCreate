@@ -1,0 +1,5 @@
+[visuals]
+	#Show delivery zone flare effects.
+	showDeliveryZoneFlareEffects = true
+	#Show flare effects on P2P request and player market pickup zones. Requires showDeliveryZoneFlareEffects to also be true.
+	showP2PZoneFlareEffects = true

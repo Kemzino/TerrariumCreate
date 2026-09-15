@@ -1,0 +1,28 @@
+[
+  {
+    "user": {
+      "type": "player",
+      "name": "Dovorol",
+      "uniqueId": "7f48b8bd-b08c-4725-a4c9-db3ec9230fc5"
+    },
+    "time": 1784557256678,
+    "type": "Profiler (live)",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/1xhq9jnDFW"
+    }
+  },
+  {
+    "user": {
+      "type": "player",
+      "name": "Dovorol",
+      "uniqueId": "7f48b8bd-b08c-4725-a4c9-db3ec9230fc5"
+    },
+    "time": 1784557199222,
+    "type": "Profiler (live)",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/wUCViyh1Bd"
+    }
+  }
+]

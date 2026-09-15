@@ -1,0 +1,70 @@
+{
+  // List of mod IDs that are always allowed
+  "WhiteList": [],
+  // List of mod IDs that are always blocked
+  "BlackList": [],
+  // List of strings that, if found in a mod ID, mark it as suspicious
+  "SuspiciousModIds": [
+    "wurst",
+    "meteor",
+    "xray",
+    "hack",
+    "cheat",
+    "aristois",
+    "impact",
+    "inertia",
+    "ares",
+    "wolfram",
+    "sigma",
+    "liquidbounce",
+    "baritone",
+    "forgehax",
+    "salhack"
+  ],
+  // List of mod IDs that are exempt from suspicious checks
+  "AllowedModIds": [
+    "pixelsanticheat",
+    "impactor",
+    "compact",
+    "impact-api"
+  ],
+  // Regex patterns for suspicious JAR files
+  "SuspiciousFilePatterns": [
+    "(?i).*wurst.*\\.jar",
+    "(?i).*meteor.*\\.jar",
+    "(?i).*xray.*\\.jar",
+    "(?i).*hack.*\\.jar",
+    "(?i).*cheat.*\\.jar",
+    "(?i).*aristois.*\\.jar",
+    "(?i).*impact.*\\.jar",
+    "(?i).*inertia.*\\.jar",
+    "(?i).*ares.*\\.jar",
+    "(?i).*wolfram.*\\.jar",
+    "(?i).*sigma.*\\.jar",
+    "(?i).*liquidbounce.*\\.jar",
+    "(?i).*baritone.*\\.jar",
+    "(?i).*forgehax.*\\.jar",
+    "(?i).*salhack.*\\.jar"
+  ],
+  // Regex patterns for JAR files exempt from suspicious checks
+  "AllowedFilePatterns": [
+    "(?i).*pixelsanticheat.*\\.jar",
+    "(?i).*impactor.*\\.jar",
+    "(?i).*compact.*\\.jar"
+  ],
+  // Regex patterns for suspicious resource packs
+  "SuspiciousResourcePackPatterns": [
+    "(?i).*xray.*\\.zip",
+    "(?i).*fullbright.*\\.zip",
+    "(?i).*cavefinder.*\\.zip",
+    "(?i).*wireframe.*\\.zip",
+    "(?i).*esp.*\\.zip",
+    "(?i).*cheat.*\\.zip"
+  ],
+  // Regex patterns for resource packs exempt from suspicious checks
+  "AllowedResourcePackPatterns": [
+    "(?i).*pixelsanticheat.*\\.zip"
+  ],
+  // Whether to kick players with suspicious content
+  "KickOnSuspiciousContent": true
+}

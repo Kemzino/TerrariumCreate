@@ -1,0 +1,17 @@
+	[client.entity_interactions]
+		#Pets periodically emit hearts when brushed
+		"Pet hearts" = true
+		#Mobs gleam when they can be brushed for resources
+		"Gleaming mobs" = true
+		#Mobs emit dust particles when brushed in the absence of a more specific particle
+		"Dusty mobs" = true
+
+	[client.block_interactions]
+		#Dust particle behaviors for brushes are altered at all
+		"Specialized particles" = true
+		#Certain blocks emit fewer particles when brushed
+		"Reduced dust" = true
+		#Certain blocks emit gleam particles when brushed
+		"Gleaming blocks" = true
+		#Gleaming blocks do not emit dust particles when brushed
+		"Pure polish" = true

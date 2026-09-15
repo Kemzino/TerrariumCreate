@@ -1,0 +1,19 @@
+{
+  "debugPathingParticlesEnabled": false,
+  "entityConfigs": {
+    "brainBugHealth": 200.0,
+    "brainBugAttackDamage": 3.0,
+    "chariotBugHealth": 10.0,
+    "chariotBugAttackDamage": 1.0,
+    "hopperBugHealth": 40.0,
+    "hopperBugAttackDamage": 9.0,
+    "hopperBugKnockbackRes": 0.8,
+    "warriorBugHealth": 60.0,
+    "warriorBugAttackDamage": 10.0,
+    "warriorBugArmor": 14.0,
+    "warriorBugArmorToughness": 4.0,
+    "warriorBugKnockbackRes": 0.8,
+    "workerBugHealth": 20.0,
+    "workerBugAttackDamage": 7.0
+  }
+}

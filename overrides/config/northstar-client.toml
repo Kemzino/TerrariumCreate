@@ -1,0 +1,14 @@
+#.
+#Allowed Values: CELSIUS, FAHRENHEIT, KELVIN
+temperatureUnit = "CELSIUS"
+#.
+#Allowed Values: PASCAL, BAR, ATMOSPHERE, PSI, MM_OF_MERCURY, INCH_OF_MERCURY
+pressureUnit = "PASCAL"
+#.
+#Whether rocket thrusters on contraptions should always produce particles shown during countdown.
+alwaysEnableThrusterParticles = false
+
+#.
+[debug]
+	#.
+	debugSealerBounds = false

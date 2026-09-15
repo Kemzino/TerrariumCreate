@@ -1,0 +1,43 @@
+	[common.entity_interactions]
+		#Pets periodically get Regeneration when brushed
+		"Pet regen" = false
+		#Nectar, technically pollen, can be brushed off of bees
+		"Pollen brush" = true
+		#Shearable mobs, such as sheep and yaks, are accidentally shorn on aggro
+		"Shearables shorn" = true
+
+		[common.entity_interactions.brush_snagging]
+			#Snagged brushes trigger hurt sound
+			"Hurt sound" = true
+			#Aggroed mobs target the player
+			"Aggro real" = true
+			#Brushes deal fake (zero) damage upon aggro-ing
+			"Aggro mock damage" = false
+			#Basic chance for mobs to aggress
+			"Base aggro chance" = 0.0
+
+		[common.entity_interactions.pandas]
+			#Pandas sneeze when aggroed
+			"Pandas sneeze" = true
+			#Only weak or baby pandas sneeze when brushed
+			"Weak or babies sneeze" = true
+			#Lazy and playful pandas are not provoked by being forced to sneeze
+			"Lazy and playful pandas stay docile" = true
+
+		[common.entity_interactions.scute_drops]
+			#Number of scutes dropped by baby turtles when grown, to compensate for brushing adults
+			"Baby turtle scute drops" = 3
+			#Number of sturdy scutes dropped by baby NML tortoises when grown, to compensate for brushing adults
+			"Baby tortoise scute drops" = 4
+
+	[common.block_interactions]
+		#Brushes destroy blocks in the removable tag
+		Removable = true
+		#Brushes drop blocks in the mineable tag
+		Mineable = true
+
+	[common.debug]
+		#Logger prints the variant for a given entity of class VariantHolder when brushed
+		"Print variants" = false
+		#Logger prints the Mixed Litter variant for an entity with Mixed Litter variants when brushed
+		"Print Mixed Litter variants" = false

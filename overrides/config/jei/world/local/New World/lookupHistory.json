@@ -1,0 +1,10 @@
+[
+  {"version":1},
+  {"ingredient":{"id":"urban_decor:polypropylene"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"urban_decor:daffodil_polyanthous"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"spawn:sunstone"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"spawn:moonstone"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"furniture:pine_grandfather_clock"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"caverns_and_chasms:necromium_ingot"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"jeg:hypersonic_cannon","components":{"jeg:gun_ammo":0,"geckolib:stack_animatable_id":20}},"type":"item_stack","bookmarkType":"INGREDIENT"}
+]

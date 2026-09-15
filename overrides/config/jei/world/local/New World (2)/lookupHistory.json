@@ -1,0 +1,13 @@
+[
+  {"version":1},
+  {"ingredient":{"id":"scguns:cyclone","components":{"minecraft:custom_data":{"Attachments":{},"AmmoCount":21,"GeckoLibID":28}}},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"creaturefeature:blitz_rod"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"creaturefeature:heavy_axe"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"gigeresque:neomorph_spore_pods"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"artifacts:chorus_totem","components":{"relics:data":{"abilities":{"abilities":{"chorus":{"points":0,"stats":{"regen_boost":{"initialQuality":8},"blind_duration":{"initialQuality":7},"cooldown":{"initialQuality":7},"regen_boost_duration":{"initialQuality":7},"vanishing_duration":{"initialQuality":1},"blind_radius":{"initialQuality":6}},"lock":{"breaks":5}}},"synergies":{}},"leveling":{},"statistic":{"metrics":{"retention_time":{"value":28.0}}}}}},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"artifacts:chorus_totem","components":{"relics:data":{"abilities":{"abilities":{"chorus":{"points":0,"stats":{"regen_boost":{"initialQuality":8},"blind_duration":{"initialQuality":7},"cooldown":{"initialQuality":7},"regen_boost_duration":{"initialQuality":7},"vanishing_duration":{"initialQuality":1},"blind_radius":{"initialQuality":6}},"lock":{"breaks":5}}},"synergies":{}},"leveling":{},"statistic":{"metrics":{"retention_time":{"value":27.0}}}}}},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"northstar:sulfuric_acid_bucket"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"northstar:sulfuric_acid"},"type":"fluid_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"gigeresque:surgery_kit"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"gigeresque:tracker","components":{"azurelib:az_id":[-1235896820,-829142504,-1718788202,-2061298270]}},"type":"item_stack","bookmarkType":"INGREDIENT"}
+]
