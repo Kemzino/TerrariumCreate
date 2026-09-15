@@ -3,6 +3,7 @@
 
 Використання:
     python tools/build_mrpack.py --profile "<шлях до профілю>" --version 1.0.0
+    python tools/build_mrpack.py --profile "<шлях>" --version 1.0.0 --server   # серверна
 
 Що робить:
   1. Для кожного mods/*.jar рахує sha1/sha512 і питає Modrinth, чи це відомий файл.
@@ -19,6 +20,7 @@ import hashlib
 import json
 import shutil
 import sys
+import urllib.parse
 import urllib.request
 import zipfile
 from pathlib import Path
@@ -57,7 +59,22 @@ def modrinth_lookup(hashes: list[str]) -> dict:
         return json.load(resp)
 
 
-def build(profile: Path, version: str) -> Path:
+def modrinth_projects(ids: list[str]) -> dict[str, dict]:
+    """GET /projects?ids=[…] — {project_id: project} (потрібні client_side/server_side)."""
+    result: dict[str, dict] = {}
+    for i in range(0, len(ids), 100):
+        chunk = json.dumps(ids[i : i + 100])
+        req = urllib.request.Request(
+            f"{MODRINTH_API}/projects?ids={urllib.parse.quote(chunk)}",
+            headers={"User-Agent": USER_AGENT},
+        )
+        with urllib.request.urlopen(req, timeout=60) as resp:
+            for project in json.load(resp):
+                result[project["id"]] = project
+    return result
+
+
+def build(profile: Path, version: str, server: bool = False) -> Path:
     pack = json.loads(PACK_JSON.read_text(encoding="utf-8"))
     name = pack["name"]
 
@@ -70,6 +87,14 @@ def build(profile: Path, version: str) -> Path:
     keys = list(hashes)
     for i in range(0, len(keys), 100):
         found.update(modrinth_lookup(keys[i : i + 100]))
+
+    # Для серверної збірки відсіюємо моди, які Modrinth позначив як
+    # server_side == "unsupported" (мінікарти, шейдери, анімації тощо).
+    projects: dict[str, dict] = {}
+    if server:
+        ids = sorted({v["project_id"] for v in found.values()})
+        projects = modrinth_projects(ids)
+    skipped_client_only: list[str] = []
 
     files = []
     lock = []
@@ -85,11 +110,18 @@ def build(profile: Path, version: str) -> Path:
             local_mods.append(path)
             lock.append({"file": path.name, "source": "override"})
             continue
+        project = projects.get(version_info["project_id"], {})
+        if server and project.get("server_side") == "unsupported":
+            skipped_client_only.append(path.name)
+            continue
         files.append(
             {
                 "path": f"mods/{path.name}",
                 "hashes": {"sha1": entry["hashes"]["sha1"], "sha512": h512},
-                "env": {"client": "required", "server": "required"},
+                "env": {
+                    "client": project.get("client_side", "required") if server else "required",
+                    "server": "required",
+                },
                 "downloads": [entry["url"]],
                 "fileSize": entry["size"],
             }
@@ -106,6 +138,10 @@ def build(profile: Path, version: str) -> Path:
     files.sort(key=lambda f: f["path"].lower())
     lock.sort(key=lambda m: m["file"].lower())
     print(f"з Modrinth: {len(files)}, локальних (в overrides/mods): {len(local_mods)}")
+    if server:
+        print(f"пропущено суто клієнтських: {len(skipped_client_only)}")
+        for n in skipped_client_only:
+            print("   -", n)
 
     # overrides/ збираємо з нуля, щоб не тягнути видалене
     if OVERRIDES.exists():
@@ -148,12 +184,13 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--profile", required=True, help="папка профілю лаунчера")
     ap.add_argument("--version", required=True, help="версія збірки, напр. 1.0.0")
+    ap.add_argument("--server", action="store_true", help="серверна збірка: без суто клієнтських модів")
     args = ap.parse_args()
     profile = Path(args.profile)
     if not (profile / "mods").is_dir():
         print(f"немає папки mods у {profile}", file=sys.stderr)
         return 1
-    build(profile, args.version)
+    build(profile, args.version, server=args.server)
     return 0
 
 
